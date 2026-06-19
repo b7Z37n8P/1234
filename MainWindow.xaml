@@ -1,0 +1,29 @@
+﻿<Window x:Class="TimeDisplayApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Отображение времени" Height="250" Width="300">
+
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+        <TextBlock x:Name="txtDisplay" 
+                   Text="00:00:00" 
+                   FontSize="32" 
+                   HorizontalAlignment="Center" 
+                   Margin="10"/>
+
+        <TextBox x:Name="txtInput" 
+                 Width="150" 
+                 Height="30"
+                 Text="00:00:00"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 PreviewTextInput="NumberValidationTextBox"
+                 MaxLength="8"/>
+
+        <Button Content="Установить время" 
+                Click="SetTime_Click" 
+                Margin="10"
+                Padding="5"/>
+
+    </StackPanel>
+</Window>
